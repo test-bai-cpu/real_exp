@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from controller import mpc_utils
 
 from sim.environment import Environment
-from sim.mpc.group import grouping, draw_all_social_spaces
+from controller.group import grouping, draw_all_social_spaces
 
 # Imports from sim.metrics
 # get_path_length

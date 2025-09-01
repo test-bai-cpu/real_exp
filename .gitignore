@@ -2,5 +2,8 @@ results/
 exps/
 sim/*_dataset
 sim/*_data
+__pycache__/
 
+PySocialForce/
+Python-RVO2/
 

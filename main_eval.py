@@ -10,15 +10,12 @@ import pickle
 
 from config import get_args, check_args
 from sim.simulator import Simulator
-from sim.mpc.ped_nopred_mpc import PedNoPredMPC
 from controller.group_linear_mpc import GroupLinearMPC
-from controller.crowd_aware_MPC import CrowdAwareMPC
 from controller import mpc_utils
 from obs_data_parser import ObsDataParser
 
 #### RL model
 import torch
-from torch.utils.tensorboard import SummaryWriter
 from rl.rl_agent import SAC
 from rl.trainer import ContinuousSACTrainer
 from rl.utils import load_config
@@ -97,14 +94,11 @@ if __name__ == "__main__":
     args.envs = envs_arg
 
     ########## Initialize the evaluation results csv file ###########
-    if args.dset_file == "datasets.yaml":
+    if args.dset_file == "datasets_eth.yaml":
         data_file = "eth_ucy_test"
     elif args.dset_file == "datasets_syn.yaml": # synthetic datasets
         data_file = "synthetic_test"
         
-    # data_file = "synthetic_test"
-    # data_file = "eth_ucy_test"
-    # data_file = "eth_ucy_train"
     print("<<<< The args.react are: ", args.react, args)
     sim = Simulator(args, f"data/{data_file}.json", logger)
     os.makedirs(os.path.join(sim.output_dir, "evas"), exist_ok=True)

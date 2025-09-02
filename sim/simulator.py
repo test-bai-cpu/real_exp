@@ -10,10 +10,10 @@ import pysocialforce as psf
 import matplotlib.animation as animation
 import matplotlib.pyplot as plt
 
-from controller import mpc_utils
+from sim.mpc import mpc_utils
 
 from sim.environment import Environment
-from controller.group import grouping, draw_all_social_spaces
+from sim.mpc.group import grouping, draw_all_social_spaces
 
 # Imports from sim.metrics
 # get_path_length

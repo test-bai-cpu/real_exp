@@ -1,7 +1,7 @@
 import numpy as np
 from collections import defaultdict
 
-from controller import mpc_utils
+from sim.mpc import mpc_utils
 
 
 class ObsDataParser:

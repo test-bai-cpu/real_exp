@@ -1,7 +1,7 @@
 import numpy as np
-from controller.base_mpc import BaseMPC
+from sim.mpc.base_mpc import BaseMPC
 
-from controller import mpc_utils
+from sim.mpc import mpc_utils
 
 class GroupLinearMPC(BaseMPC):
 # MPC class for Group-based representation without prediction

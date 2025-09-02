@@ -35,6 +35,6 @@ cd ..
 
 
 ## Run experiments
-
-
-
+```bash
+./run.sh
+```
